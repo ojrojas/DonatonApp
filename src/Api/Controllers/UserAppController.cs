@@ -41,6 +41,7 @@ namespace Api.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         /// <summary>
         /// Post User App
         /// </summary>

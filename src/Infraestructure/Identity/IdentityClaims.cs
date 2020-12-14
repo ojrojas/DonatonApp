@@ -33,29 +33,28 @@ namespace Infraestructure.Identity
             var user = await _userContext.FindApplicationUser(specificationUser);
             var claims = new List<Claim>();
 
-            if (user != null)
+            if (user == null)
             {
-                foreach (PropertyInfo prop in user.GetType().GetProperties())
-                {
-                   var type = Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType;
-                   if(prop.Name != "DecryptedPassword")
-                        if(prop.GetValue(user, null) != null)
-                   claims.Add(new Claim(prop.Name, prop.GetValue(user,null).ToString()));
-                }
-
-                var tokenDescriptor = new SecurityTokenDescriptor
-                {
-                    Subject = new ClaimsIdentity(claims.ToArray()),
-                    Expires = DateTime.UtcNow.AddHours(8),
-                    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-                };
-                var token = tokenHandler.CreateToken(tokenDescriptor);
                 await Task.CompletedTask;
-                return tokenHandler.WriteToken(token);
+                return null;
+            }
+            foreach (PropertyInfo prop in user.GetType().GetProperties())
+            {
+                var type = Nullable.GetUnderlyingType(prop.PropertyType) ?? prop.PropertyType;
+                if (prop.Name != "DecryptedPassword")
+                    if (prop.GetValue(user, null) != null)
+                        claims.Add(new Claim(prop.Name, prop.GetValue(user, null).ToString()));
             }
 
+            var tokenDescriptor = new SecurityTokenDescriptor
+            {
+                Subject = new ClaimsIdentity(claims.ToArray()),
+                Expires = DateTime.UtcNow.AddHours(8),
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+            };
+            var token = tokenHandler.CreateToken(tokenDescriptor);
             await Task.CompletedTask;
-            return null;
+            return tokenHandler.WriteToken(token);
         }
     }
 }
