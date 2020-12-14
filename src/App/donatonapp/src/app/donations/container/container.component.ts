@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HeaderModel } from 'src/app/models/hader.model';
+import { DonationsService } from '../services/donations.service';
+import { State } from '../store/donations.reducer';
 
 @Component({
   selector: 'app-container',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
 
-  constructor() { }
+  state$: Observable<State>;
+  headerDonations: HeaderModel;
+
+  constructor(private service: DonationsService) { }
 
   ngOnInit(): void {
+    this.state$ = this.service.getState();
+    this.headerDonations = this.service.getHeader();
+    this.service.loadComponentsForms();
   }
 
 }

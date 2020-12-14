@@ -5,6 +5,7 @@ import * as fromUsersReducer from './users-app/store/users-app.reducer';
 import * as fromHomeReducer from './home/store/home.reducer';
 import * as fromLoginReducer from './login/store/login.reducer';
 import * as fromAuthReducer from './auth/store/auth.reducer';
+import * as fromDonationReducer from './donations/store/donations.reducer';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,7 @@ export class AppReducerService {
       userState : fromUsersReducer.reducer,
       loginState: fromLoginReducer.reducer,
       authState: fromAuthReducer.reducer,
+      donationState: fromDonationReducer.reducer
     };
   }
 }

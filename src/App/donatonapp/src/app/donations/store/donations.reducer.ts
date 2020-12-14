@@ -2,6 +2,9 @@ import { Action, createReducer, on } from '@ngrx/store';
 import { DonationMoney } from 'src/app/models/donation-money.model';
 import { DonationNonPerishable } from 'src/app/models/donation-non-perishable.model';
 import { DonationPerishable } from 'src/app/models/donation-perishable.model';
+import { StateMaterial } from 'src/app/models/state-material.model';
+import { TypeDonation } from 'src/app/models/typedonation.model';
+import { TypeIdentification } from 'src/app/models/typeidentification.model';
 import * as fromActions from './donations.actions';
 
 export const donationsFeatureKey = 'donations';
@@ -15,6 +18,9 @@ export interface State {
   donationMoney: DonationMoney;
   donationPerishable: DonationPerishable;
   donationNonPerishable: DonationNonPerishable;
+  stateMaterials: StateMaterial[];
+  typeDonations: TypeDonation[];
+  typeIdentifications: TypeIdentification[];
 }
 
 export const initialState: State = {
@@ -25,7 +31,10 @@ export const initialState: State = {
   error: null,
   donationMoney: null,
   donationPerishable: null,
-  donationNonPerishable: null
+  donationNonPerishable: null,
+  stateMaterials: [],
+  typeDonations: [],
+  typeIdentifications: []
 };
 
 export const reducer = createReducer(
@@ -72,7 +81,7 @@ export const reducer = createReducer(
     isLoading: false,
     error,
   })),
-  on(fromActions.createDonationsMoney, (state, {donationMoney} ) => ({
+  on(fromActions.createDonationsMoney, (state, { donationMoney }) => ({
     ...state,
     donationMoney,
     isLoading: true
@@ -87,7 +96,7 @@ export const reducer = createReducer(
     isLoading: false,
     error,
   })),
-  on(fromActions.createDonationsPerishable, (state, {donationPerishable} ) => ({
+  on(fromActions.createDonationsPerishable, (state, { donationPerishable }) => ({
     ...state,
     donationPerishable,
     isLoading: true
@@ -102,7 +111,7 @@ export const reducer = createReducer(
     isLoading: false,
     error,
   })),
-  on(fromActions.createDonationsNonPerishable, (state, {donationNonPerishable} ) => ({
+  on(fromActions.createDonationsNonPerishable, (state, { donationNonPerishable }) => ({
     ...state,
     donationNonPerishable,
     isLoading: true

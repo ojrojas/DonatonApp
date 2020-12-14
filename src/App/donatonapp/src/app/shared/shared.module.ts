@@ -28,6 +28,7 @@ import { SnackBarService } from './components/snack-bar/snack-bar.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
+import { ChartsModule } from 'ng2-charts';
 
 
 
@@ -72,7 +73,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     FormsModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatExpansionModule
+    MatExpansionModule,
+    ChartsModule
   ],
   entryComponents: [
     ModalSharedComponent

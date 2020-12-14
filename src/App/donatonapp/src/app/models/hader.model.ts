@@ -8,4 +8,4 @@ export interface ConfigButtons {
     color: string;
     description: string;
     action: () => {};
- }
+}

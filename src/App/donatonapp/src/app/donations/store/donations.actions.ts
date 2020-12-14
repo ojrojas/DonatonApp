@@ -2,6 +2,10 @@ import { createAction, props } from '@ngrx/store';
 import { DonationMoney } from 'src/app/models/donation-money.model';
 import { DonationNonPerishable } from 'src/app/models/donation-non-perishable.model';
 import { DonationPerishable } from 'src/app/models/donation-perishable.model';
+import { EnumsModeForms } from 'src/app/models/enums.model';
+import { StateMaterial } from 'src/app/models/state-material.model';
+import { TypeDonation } from 'src/app/models/typedonation.model';
+import { TypeIdentification } from 'src/app/models/typeidentification.model';
 
 // Donations Dashboard
 // Donations Money
@@ -192,3 +196,71 @@ export const DeleteDonationsNonPerishableFailure = createAction(
   '[Donations] Delete Donation NonPerishable Failure',
   props<{ error: any }>()
 );
+
+// Launch Form Modals
+
+// LaunchForm DonationMoney
+export const LaunchFormModalDonationMoney = createAction(
+  '[Donations] Lanch Form Modal Donation Money',
+  props<{ donationMoney: DonationMoney, mode: EnumsModeForms, title: string }>()
+);
+
+// LaunchForm DonationPerishable
+export const LaunchFormModalDonationPerishable = createAction(
+  '[Donations] Launch Form Modal Donation Perishable',
+  props<{ donationPerishable: DonationPerishable, mode: EnumsModeForms, title: string }>()
+);
+
+// LaunchForm DonationNonPerishable
+export const LaunchFormModalDonationNonPerishable = createAction(
+  '[Donations] Launch Form Modal Donation Non Perishable',
+  props<{ donationNonPerishable: DonationNonPerishable, mode: EnumsModeForms, title: string }>()
+);
+
+// Load Transversals
+export const loadStateMaterial = createAction(
+  '[Donations] load State Material'
+);
+
+export const loadStateMaterialSuccess = createAction(
+  '[Donations] load State Material Success',
+  props<{stateMaterials: StateMaterial[]}>()
+);
+
+export const loadStateMaterialFailure = createAction(
+  '[Donations] load State Material Failure',
+  props<{error: any}>()
+);
+
+export const loadTypeDonation = createAction(
+  '[Donations] load Type Donations'
+);
+
+export const loadTypeDonationSuccess = createAction(
+  '[Donations] load Type Donations Success',
+  props<{typeDonations: TypeDonation[]}>()
+);
+
+export const loadTypeDonationFailure = createAction(
+  '[Donations] load Type Donations Failure',
+  props<{error: any}>()
+);
+
+export const loadTypeIdentification = createAction(
+  '[Donations] load Type Identification'
+);
+
+export const loadTypeIdentificationSuccess = createAction(
+  '[Donations] load type Identification Success',
+  props<{typeIdentifications: TypeIdentification[] }>()
+);
+
+export const loadTypeIdentificationFailure = createAction(
+  '[Donations] load type Identification Failure',
+  props<{error: any }>()
+);
+
+
+
+
+

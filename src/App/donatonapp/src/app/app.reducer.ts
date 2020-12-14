@@ -5,12 +5,14 @@ import * as fromUserAppReducer from './users-app/store/users-app.reducer';
 import * as fromHomeReducer from './home/store/home.reducer';
 import * as fromLoginReducer from './login/store/login.reducer';
 import * as fromAuthReducer from './auth/store/auth.reducer';
+import * as fromDonationReducer from './donations/store/donations.reducer';
 
 export interface AppState {
     userState: fromUserAppReducer.State;
     homeState: fromHomeReducer.State;
     loginState: fromLoginReducer.State;
     authState: fromAuthReducer.State;
+    donationState: fromDonationReducer.State;
 }
 
 export const REDUCER_TOKEN = new InjectionToken<ActionReducerMap<AppState>>
