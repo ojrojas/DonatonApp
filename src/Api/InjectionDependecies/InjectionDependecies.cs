@@ -40,6 +40,8 @@ namespace Api.InjectionDependencies
             services.AddScoped<IDonationPerishableService, DonationPerishableService>();
             services.AddScoped<IStateMaterialService, StateMaterialService>();
             services.AddScoped<ITypeDonationService, TypeDonationService>();
+            services.AddScoped<IListClintonService, ListClintonService>();
+
             return services;
         }
 
