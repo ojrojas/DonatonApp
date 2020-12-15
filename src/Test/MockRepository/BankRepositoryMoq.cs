@@ -19,7 +19,7 @@ namespace Test.MockRepository
         private void ConfiguracionBankRepositoryMoq()
         {
             //Update
-            _bankRepository.Setup((x) => x.Edit(
+            _bankRepository.Setup((x) => x.Update(
                 It.IsAny<Bank>())).ReturnsAsync(default(Bank));
             //Create
             _bankRepository.Setup((x) => x.Create(
@@ -28,7 +28,7 @@ namespace Test.MockRepository
             _bankRepository.Setup((x) => x.Delete(
                 It.IsAny<Guid>())).ReturnsAsync(default(Bank));
             //Get
-            _bankRepository.Setup((x) => x.GetAllBanks()).ReturnsAsync(default(List<Bank>));
+            _bankRepository.Setup((x) => x.GetAll()).ReturnsAsync(default(List<Bank>));
         }
     }
 }
