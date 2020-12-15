@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Test\\Test.csproj": {}
+    "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Api\\Api.csproj": {
+    "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Api\\Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Api\\Api.csproj",
+        "projectUniqueName": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Api\\Api.csproj",
         "projectName": "Api",
-        "projectPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Api\\Api.csproj",
+        "projectPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Api\\Api.csproj",
         "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Api\\obj\\",
+        "outputPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -32,11 +32,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj"
+              "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj": {
+                "projectPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj"
               },
-              "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj": {
-                "projectPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj"
+              "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj": {
+                "projectPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj"
               }
             }
           }
@@ -106,14 +106,14 @@
         }
       }
     },
-    "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj": {
+    "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj",
+        "projectUniqueName": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj",
+        "projectPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\obj\\",
+        "outputPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -178,14 +178,14 @@
         }
       }
     },
-    "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj": {
+    "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj",
+        "projectUniqueName": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj",
         "projectName": "Infraestructure",
-        "projectPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj",
+        "projectPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj",
         "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\obj\\",
+        "outputPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -206,8 +206,8 @@
           "netstandard2.1": {
             "targetAlias": "netstandard2.1",
             "projectReferences": {
-              "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj"
+              "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj": {
+                "projectPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj"
               }
             }
           }
@@ -276,14 +276,14 @@
         }
       }
     },
-    "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Test\\Test.csproj": {
+    "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Test\\Test.csproj",
+        "projectUniqueName": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Test\\Test.csproj",
+        "projectPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Test\\Test.csproj",
         "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Test\\obj\\",
+        "outputPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Test\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -304,14 +304,14 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Api\\Api.csproj": {
-                "projectPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Api\\Api.csproj"
+              "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Api\\Api.csproj": {
+                "projectPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Api\\Api.csproj"
               },
-              "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj"
+              "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj": {
+                "projectPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Core\\Core.csproj"
               },
-              "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj": {
-                "projectPath": "C:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj"
+              "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj": {
+                "projectPath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Infraestructure\\Infraestructure.csproj"
               }
             }
           }
@@ -372,9 +372,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
