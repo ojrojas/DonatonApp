@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Core.Entities;
 using Core.Interfaces;
+using Core.Specifications;
 
 namespace Core.Services  
 {
@@ -17,7 +18,8 @@ namespace Core.Services
 
         public async Task<DonationMoney> Create(DonationMoney DonationMoney)
         {
-           return await this.asyncRepository.CreateAsync(DonationMoney);
+            if(await this.IsListCLinton(DonationMoney)) return null;
+            return await this.asyncRepository.CreateAsync(DonationMoney);
         }
 
         public async Task<DonationMoney> Delete(Guid Id)
@@ -39,6 +41,14 @@ namespace Core.Services
         public async Task<DonationMoney> Update(DonationMoney DonationMoney)
         {
            return await this.asyncRepository.UpdateAsync(DonationMoney);
+        }
+
+        private async Task<bool> IsListCLinton(DonationMoney donationMoney)
+        {
+            var specification = new DonationMoneySpecification(donationMoney.TypeIdentificationId, donationMoney.Identification);
+            var result =  await this.asyncRepository.FirstOrDefaultAsync(specification);
+            if(result != null) return true;
+            return false;
         }
     }
 }

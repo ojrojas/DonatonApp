@@ -77,7 +77,7 @@ export class DonationsEffects {
         catchError((error) => of(fromActions.loadTypeDonationFailure({ error }))
         )))
   ));
-  
+
   loadTypeIdentification$ = createEffect(() => this.actions$.pipe(
     ofType(fromActions.loadTypeIdentification),
     concatMap(() => this.apiService.getAll<TypeIdentification[]>(RoutesApis.typeIdentification)
@@ -98,14 +98,23 @@ export class DonationsEffects {
   createDonationsMoneySuccess$ = createEffect(() => this.actions$.pipe(
     ofType(fromActions.createDonationsMoneySuccess),
     tap((props) => {
-      this.modalServices.close();
-      this.notification.createNotification(
-        'Donación creada con exito',
-        'Donaciones',
-        3000,
-        HorizontalPosition.end,
-        VerticalPosition.bottom);
-      this.service.loadDonationMoneys();
+      if (props.donationMoney !== null) {
+        this.modalServices.close();
+        this.notification.createNotification(
+          'Donación creada con exito',
+          'Donaciones',
+          3000,
+          HorizontalPosition.end,
+          VerticalPosition.bottom);
+        this.service.loadDonationMoneys();
+      } else {
+        this.notification.createNotification(
+          'Donador se encuentra en la lista lista clinton',
+          'Donaciones',
+          3000,
+          HorizontalPosition.end,
+          VerticalPosition.bottom);
+      }
     })), { dispatch: false });
 
   createDonationsPerishable$ = createEffect(() => this.actions$.pipe(
@@ -119,14 +128,23 @@ export class DonationsEffects {
   createDonationsPerishableSuccess$ = createEffect(() => this.actions$.pipe(
     ofType(fromActions.createDonationsPerishableSuccess),
     tap((props) => {
-      this.modalServices.close();
-      this.notification.createNotification(
-        'Donación creada con exito',
-        'Donaciones',
-        3000,
-        HorizontalPosition.end,
-        VerticalPosition.bottom);
-      this.service.loadDonationsPerishable();
+      if (props.donationPerishable !== null) {
+        this.modalServices.close();
+        this.notification.createNotification(
+          'Donación creada con exito',
+          'Donaciones',
+          3000,
+          HorizontalPosition.end,
+          VerticalPosition.bottom);
+        this.service.loadDonationsPerishable();
+      } else {
+        this.notification.createNotification(
+          'Donador se encuentra en la lista lista clinton',
+          'Donaciones',
+          3000,
+          HorizontalPosition.end,
+          VerticalPosition.bottom);
+      }
     })), { dispatch: false });
 
   createDonationsNonPerishable$ = createEffect(() => this.actions$.pipe(
@@ -140,35 +158,43 @@ export class DonationsEffects {
   createDonationsNonPerishableSuccess$ = createEffect(() => this.actions$.pipe(
     ofType(fromActions.createDonationsNonPerishableSuccess),
     tap((props) => {
-      this.modalServices.close();
-      this.notification.createNotification(
-        'Donación creada con exito',
-        'Donaciones',
-        3000,
-        HorizontalPosition.end,
-        VerticalPosition.bottom);
-      this.service.loadDonationsPerishable();
+      if (props.donationNonPerishable !== null) {
+        this.modalServices.close();
+        this.notification.createNotification(
+          'Donación creada con exito',
+          'Donaciones',
+          3000,
+          HorizontalPosition.end,
+          VerticalPosition.bottom);
+        this.service.loadDonationsPerishable();
+      } else {
+        this.notification.createNotification(
+          'Donador se encuentra en la lista lista clinton',
+          'Donaciones',
+          3000,
+          HorizontalPosition.end,
+          VerticalPosition.bottom);
+      }
     })), { dispatch: false });
 
   LaunchFormModalDonationMoney$ = createEffect(() => this.actions$.pipe(
     ofType(fromActions.LaunchFormModalDonationMoney),
     tap((props) => {
-      debugger;
       this.modalServices.open({
-      title: props.title,
-      component: DonationMoneyComponent,
-      CssStyles: {
-        width: '900px'
-      },
-      parameters: [
-        { mode: props.mode },
-        { donationMoney: props.donationMoney },
-        { typeDonations : props.typeDonations},
-        { typeIdentifications : props.typeIdentifications},
-        { banks: props.banks}
-      ]
-    });
-  })), { dispatch: false });
+        title: props.title,
+        component: DonationMoneyComponent,
+        CssStyles: {
+          width: '900px'
+        },
+        parameters: [
+          { mode: props.mode },
+          { donationMoney: props.donationMoney },
+          { typeDonations: props.typeDonations },
+          { typeIdentifications: props.typeIdentifications },
+          { banks: props.banks }
+        ]
+      });
+    })), { dispatch: false });
 
 
   LaunchFormModalDonationPerishable$ = createEffect(() => this.actions$.pipe(
@@ -182,8 +208,8 @@ export class DonationsEffects {
       parameters: [
         { mode: props.mode },
         { donationPerishable: props.donationPerishable },
-        { typeDonations : props.typeDonations},
-        { typeIdentifications : props.typeIdentifications},
+        { typeDonations: props.typeDonations },
+        { typeIdentifications: props.typeIdentifications },
       ]
     }))), { dispatch: false });
 
@@ -198,8 +224,8 @@ export class DonationsEffects {
       parameters: [
         { mode: props.mode },
         { donationNonPerishable: props.donationNonPerishable },
-        { typeDonations : props.typeDonations},
-        { typeIdentifications : props.typeIdentifications},
+        { typeDonations: props.typeDonations },
+        { typeIdentifications: props.typeIdentifications },
         { stateMaterials: props.stateMaterials }
       ]
     }))), { dispatch: false });

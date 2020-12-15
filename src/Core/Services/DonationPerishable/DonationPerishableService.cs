@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Core.Entities;
 using Core.Interfaces;
+using Core.Specifications;
 
 namespace Core.Services  
 {
@@ -17,6 +18,7 @@ namespace Core.Services
 
         public async Task<DonationPerishable> Create(DonationPerishable DonationPerishable)
         {
+           if(await this.IsListCLinton(DonationPerishable)) return null;
            return await this.asyncRepository.CreateAsync(DonationPerishable);
         }
 
@@ -39,6 +41,15 @@ namespace Core.Services
         public async Task<DonationPerishable> Update(DonationPerishable DonationPerishable)
         {
            return await this.asyncRepository.UpdateAsync(DonationPerishable);
+        }
+
+         private async Task<bool> IsListCLinton(DonationPerishable donationPerishable)
+        {
+            var specification = new DonationPerishableSpecification(
+               donationPerishable.TypeIdentificationId, donationPerishable.Identification);
+            var result = await this.asyncRepository.FirstOrDefaultAsync(specification);
+            if (result != null) return true;
+            return false;
         }
     }
 }

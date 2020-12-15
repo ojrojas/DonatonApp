@@ -60,7 +60,6 @@ export class DonationMoneyComponent implements OnInit {
   }
 
   submit(): void {
-    debugger;
     if (this.form.valid) {
       switch (this.mode) {
         case EnumsModeForms.Create:
