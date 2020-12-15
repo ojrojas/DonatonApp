@@ -9,6 +9,10 @@ import { DonationNonPerishable } from 'src/app/models/donation-non-perishable.mo
 import { EnumsModeForms } from 'src/app/models/enums.model';
 import { Observable } from 'rxjs';
 import { getStateDonations } from '../store/donations.selectors';
+import { TypeDonation } from 'src/app/models/typedonation.model';
+import { TypeIdentification } from 'src/app/models/typeidentification.model';
+import { Bank } from 'src/app/models/bank.model';
+import { StateMaterial } from 'src/app/models/state-material.model';
 
 
 @Injectable({
@@ -48,6 +52,10 @@ export class DonationsService {
     this.store.dispatch(fromAction.loadTypeIdentification());
   }
 
+  loadBanks(): void {
+    this.store.dispatch(fromAction.loadBanks());
+  }
+
   loadComponentsForms(): void {
     this.loadDonationMoneys();
     this.loadDonationsPerishable();
@@ -55,6 +63,7 @@ export class DonationsService {
     this.loadTypeDonations();
     this.loadStateMaterial();
     this.loadTypeIdentification();
+    this.loadBanks();
   }
 
 
@@ -85,29 +94,104 @@ export class DonationsService {
 
   addDonationMoney(): void {
     const donationMoney: DonationMoney = null;
-    this.launchFormModalDonationMoney(donationMoney, EnumsModeForms.Create, 'Crear donación en dinero');
+    this.getState().subscribe(state => {
+      this.launchFormModalDonationMoney(
+        donationMoney,
+        state.typeDonations,
+        state.typeIdentifications,
+        state.banks,
+        EnumsModeForms.Create,
+        'Crear donación en dinero');
+    }).unsubscribe();
   }
 
   addDonationPerishable(): void {
     const donationPerishable: DonationPerishable = null;
-    this.launchFormModalDonationPerishable(donationPerishable, EnumsModeForms.Create, 'Crear donación en especie no perecedera');
+    this.getState().subscribe(state => {
+      this.launchFormModalDonationPerishable(
+        donationPerishable,
+        state.typeDonations,
+        state.typeIdentifications,
+        EnumsModeForms.Create,
+        'Crear donación en especie perecedera');
+    }).unsubscribe();
   }
 
   addDonationNonPerishable(): void {
     const donationNonPerishable: DonationNonPerishable = null;
-    this.launchFormModalDonationNonPerishable(donationNonPerishable, EnumsModeForms.Create, 'Crear donación en especie perecedera');
+    this.getState().subscribe(state => {
+      this.launchFormModalDonationNonPerishable(
+        donationNonPerishable,
+        state.typeDonations,
+        state.typeIdentifications,
+        state.stateMaterials,
+        EnumsModeForms.Create,
+        'Crear donación en especie no perecedera');
+    }).unsubscribe();
   }
 
-  launchFormModalDonationMoney(donationMoney: DonationMoney, mode, title): void {
-    this.store.dispatch(fromAction.LaunchFormModalDonationMoney({ donationMoney, mode, title }));
+  launchFormModalDonationMoney(
+    donationMoney: DonationMoney,
+    typeDonations: TypeDonation[],
+    typeIdentifications: TypeIdentification[],
+    banks: Bank[],
+    mode: EnumsModeForms,
+    title: string
+  ): void {
+    this.store.dispatch(fromAction.LaunchFormModalDonationMoney({
+      donationMoney,
+      typeDonations,
+      typeIdentifications,
+      banks,
+      mode,
+      title
+    }));
   }
 
-  launchFormModalDonationPerishable(donationPerishable: DonationPerishable, mode, title): void {
-    this.store.dispatch(fromAction.LaunchFormModalDonationPerishable({ donationPerishable, mode, title }));
+  launchFormModalDonationPerishable(
+    donationPerishable: DonationPerishable,
+    typeDonations: TypeDonation[],
+    typeIdentifications: TypeIdentification[],
+    mode: EnumsModeForms,
+    title: string
+  ): void {
+    this.store.dispatch(fromAction.LaunchFormModalDonationPerishable({
+      donationPerishable,
+      typeDonations,
+      typeIdentifications,
+      mode,
+      title
+    }));
   }
 
-  launchFormModalDonationNonPerishable(donationNonPerishable: DonationNonPerishable, mode, title): void {
-    this.store.dispatch(fromAction.LaunchFormModalDonationNonPerishable({ donationNonPerishable, mode, title }));
+  launchFormModalDonationNonPerishable(
+    donationNonPerishable: DonationNonPerishable,
+    typeDonations: TypeDonation[],
+    typeIdentifications: TypeIdentification[],
+    stateMaterials: StateMaterial[],
+    mode: EnumsModeForms,
+    title: string
+  ): void {
+    this.store.dispatch(fromAction.LaunchFormModalDonationNonPerishable({
+      donationNonPerishable,
+      typeDonations,
+      typeIdentifications,
+      stateMaterials,
+      mode,
+      title
+    }));
+  }
+
+  createDonationsMoney(donationMoney: DonationMoney): void {
+    this.store.dispatch(fromAction.createDonationsMoney({ donationMoney }));
+  }
+
+  createDonationsPerishable(donationPerishable: DonationPerishable): void {
+    this.store.dispatch(fromAction.createDonationsPerishable({ donationPerishable }));
+  }
+
+  createDonationsNonPerishable(donationNonPerishable: DonationNonPerishable): void {
+    this.store.dispatch(fromAction.createDonationsNonPerishable({ donationNonPerishable }));
   }
 
 }

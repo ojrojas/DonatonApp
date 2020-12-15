@@ -19,8 +19,12 @@ export class SideBarComponent {
 
   constructor(
     private breakpointObserver: BreakpointObserver,
-    private router:Router) {
-      this.router.navigate(['/home']);
-    }
+    private router: Router) {
+    this.router.navigate(['/home']);
+  }
+
+  logout(): void {
+    window.location.href = 'login';
+  }
 
 }

@@ -8,5 +8,6 @@ export enum RoutesApis {
     donationPerishables = 'donationPerishables',
     listClintons = 'listClintons',
     stateMaterials = 'stateMaterials',
-    typeDonations = 'typeDonations'
+    typeDonations = 'typeDonations',
+    banks= 'banks'
 }

@@ -4,6 +4,7 @@ import { of } from 'rxjs';
 import { catchError, concatMap, map, tap } from 'rxjs/operators';
 import { RoutesApis } from 'src/app/core/apis/api.routes';
 import { ApiService } from 'src/app/core/apis/api.service';
+import { Bank } from 'src/app/models/bank.model';
 import { DonationMoney } from 'src/app/models/donation-money.model';
 import { DonationNonPerishable } from 'src/app/models/donation-non-perishable.model';
 import { DonationPerishable } from 'src/app/models/donation-perishable.model';
@@ -47,6 +48,15 @@ export class DonationsEffects {
       .pipe(
         map(response => (fromActions.loadDonationsNonPerishableSuccess({ donationNonPerishables: response.body }))),
         catchError((error) => of(fromActions.loadDonationsNonPerishableFailure({ error }))
+        )))
+  ));
+
+  loadBanks$ = createEffect(() => this.actions$.pipe(
+    ofType(fromActions.loadBanks),
+    concatMap(() => this.apiService.getAll<Bank[]>(RoutesApis.banks)
+      .pipe(
+        map(response => (fromActions.loadBanksSuccess({ banks: response.body }))),
+        catchError((error) => of(fromActions.loadBanksFailure({ error }))
         )))
   ));
 
@@ -142,7 +152,9 @@ export class DonationsEffects {
 
   LaunchFormModalDonationMoney$ = createEffect(() => this.actions$.pipe(
     ofType(fromActions.LaunchFormModalDonationMoney),
-    tap((props) => this.modalServices.open({
+    tap((props) => {
+      debugger;
+      this.modalServices.open({
       title: props.title,
       component: DonationMoneyComponent,
       CssStyles: {
@@ -150,9 +162,13 @@ export class DonationsEffects {
       },
       parameters: [
         { mode: props.mode },
-        { donationMoney: props.donationMoney }
+        { donationMoney: props.donationMoney },
+        { typeDonations : props.typeDonations},
+        { typeIdentifications : props.typeIdentifications},
+        { banks: props.banks}
       ]
-    }))), { dispatch: false });
+    });
+  })), { dispatch: false });
 
 
   LaunchFormModalDonationPerishable$ = createEffect(() => this.actions$.pipe(
@@ -165,7 +181,9 @@ export class DonationsEffects {
       },
       parameters: [
         { mode: props.mode },
-        { donationPerishable: props.donationPerishable }
+        { donationPerishable: props.donationPerishable },
+        { typeDonations : props.typeDonations},
+        { typeIdentifications : props.typeIdentifications},
       ]
     }))), { dispatch: false });
 
@@ -179,7 +197,10 @@ export class DonationsEffects {
       },
       parameters: [
         { mode: props.mode },
-        { donationNonPerishable: props.donationNonPerishable }
+        { donationNonPerishable: props.donationNonPerishable },
+        { typeDonations : props.typeDonations},
+        { typeIdentifications : props.typeIdentifications},
+        { stateMaterials: props.stateMaterials }
       ]
     }))), { dispatch: false });
 

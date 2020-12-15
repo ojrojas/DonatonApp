@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 namespace Api.Controllers
 {
     [ApiController]
-    [Authorize]
+    // [Authorize]
+    [AllowAnonymous]
     [Route("api/[controller]")]
     public class BanksController : ControllerBase
     {

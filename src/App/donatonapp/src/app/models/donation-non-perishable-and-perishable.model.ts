@@ -1,4 +1,4 @@
-import { Donation } from "./donation.model";
+import { Donation } from './donation.model';
 
 export interface DonationNonPerishableAndPerishable extends Donation {
     city: string;

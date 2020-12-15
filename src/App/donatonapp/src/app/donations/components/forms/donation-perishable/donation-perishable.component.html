@@ -1,1 +1,127 @@
-<p>donation-perishable works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <mat-card>
+        <mat-card-content class="form-font-size">
+            <mat-grid-list cols="3" rowHeight="80px">
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Tipo de Identificacíon</mat-label>
+                        <input type="hidden" formControlName="id" *ngIf="mode !== 0">
+                        <mat-select formControlName="typeIdentificationId">
+                            <mat-option *ngFor="let typeIdentification of typeIdentifications"
+                                [value]="typeIdentification.id">{{typeIdentification.description}}</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="form.get('typeIdentificationId').invalid">El campo tipo de identificación es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Identificacíon</mat-label>
+                        <input formControlName="identification" matInput placeholder="Identificación">
+                        <mat-error *ngIf="form.get('identification').invalid">El campo identificación es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Donador</mat-label>
+                        <input formControlName="donor" matInput placeholder="Donador">
+                        <mat-error *ngIf="form.get('donor').invalid">El campo donador es <strong>requerido</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Dirección</mat-label>
+                        <input type="text" formControlName="address" matInput placeholder="Dirección">
+                        <mat-error *ngIf="form.get('address').invalid">El campo dirección es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Ciudad</mat-label>
+                        <input type="text" formControlName="city" matInput placeholder="Ciudad">
+                        <mat-error *ngIf="form.get('city').invalid">El campo ciudad de donación es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Contacto</mat-label>
+                        <input type="text" formControlName="contactNumber" matInput placeholder="Numero de Contacto">
+                        <mat-error *ngIf="form.get('contactNumber').invalid">El campo contacto es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Decha expiración</mat-label>
+                        <input type="date" formControlName="dateExpiration" matInput placeholder="Valor">
+                        <mat-error *ngIf="form.get('dateExpiration').invalid">El campo fecha de expiración es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+              
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Entrega</mat-label>
+                        <input type="text" formControlName="deliveryName" matInput placeholder="Nombre entrega">
+                        <mat-error *ngIf="form.get('deliveryName').invalid">El campo quien entrega es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Fecha entrega</mat-label>
+                        <input   matInput type="datetime-local" formControlName="deliveryTime" placeholder="Fecha de entrega">
+                        <mat-error *ngIf="form.get('deliveryTime').invalid">El campo fecha de entrega donación es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Descripción</mat-label>
+                        <input type="text" formControlName="description" matInput placeholder="Descripción">
+                        <mat-error *ngIf="form.get('description').invalid">El campo descripción es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Cantidad</mat-label>
+                        <input type="number" formControlName="quantity" matInput placeholder="Cantidad">
+                        <mat-error *ngIf="form.get('quantity').invalid">El campo cantidad es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Unidad de medida</mat-label>
+                        <input type="text" formControlName="unitMeasurement" matInput placeholder="Unidad de medida">
+                        <mat-error *ngIf="form.get('unitMeasurement').invalid">El campo unidad de medida es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+            </mat-grid-list>
+            <mat-divider></mat-divider>
+            <br>
+            <div class="actions-buttons">
+                <button type="button" *ngIf="mode === 0" mat-raised-button color="primary"
+                    (click)="submit()">Crear</button>
+                <button type="button" *ngIf="mode === 1" mat-raised-button color="primary"
+                    (click)="submit()">Editar</button>
+                <button type="button" *ngIf="mode === 3" mat-raised-button color="primary"
+                    (click)="submit()">Eliminar</button>
+                <button type="button" (click)="close()" mat-button color="asscent">Cancelar</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</form>

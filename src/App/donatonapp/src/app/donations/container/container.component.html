@@ -1,8 +1,10 @@
 <app-loading [isLoading]="(state$ | async ).isLoading">
     <app-header-pages [headerModel]="headerDonations"></app-header-pages>
     <div class="inner-content">
-       <app-dashboard>
-            <h1>Algo</h1>
+       <app-dashboard 
+       [donationMoneys]="(state$ | async ).donationMoneys" 
+       [donationNonPerishables]="(state$ | async ).donationNonPerishables"
+       [donationPerishables]="(state$ | async ).donationPerishables">
        </app-dashboard>
     </div>
 </app-loading>

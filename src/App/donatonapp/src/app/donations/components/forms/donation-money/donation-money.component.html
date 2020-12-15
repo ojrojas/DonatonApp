@@ -1,1 +1,76 @@
-<p>donation-money works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <mat-card>
+        <mat-card-content class="form-font-size">
+            <mat-grid-list cols="3" rowHeight="80px">
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Tipo de Identificacíon</mat-label>
+                        <input type="hidden" formControlName="id" *ngIf="mode !== 0">
+                        <mat-select formControlName="typeIdentificationId">
+                            <mat-option *ngFor="let typeIdentification of typeIdentifications"
+                                [value]="typeIdentification.id">{{typeIdentification.description}}</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="form.get('typeIdentificationId').invalid">El campo tipo de identificación es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Identificacíon</mat-label>
+                        <input formControlName="identification" matInput placeholder="Identificación">
+                        <mat-error *ngIf="form.get('identification').invalid">El campo identificación es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Donador</mat-label>
+                        <input formControlName="donor" matInput placeholder="Donador">
+                        <mat-error *ngIf="form.get('donor').invalid">El campo donador es <strong>requerido</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Banco</mat-label>
+                        <mat-select formControlName="bankId">
+                            <mat-option *ngFor="let bank of banks" [value]="bank.id">{{bank.description}}</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="form.get('bankId').invalid">El campo banco es <strong>requerido</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Valor</mat-label>
+                        <input type="number" formControlName="value" matInput placeholder="Valor">
+                        <mat-error *ngIf="form.get('value').invalid">El campo valor es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+                <mat-grid-tile>
+                    <mat-form-field appearance="outline">
+                        <mat-label>Decha donación</mat-label>
+                        <input type="date" formControlName="dateDonation" matInput placeholder="Valor">
+                        <mat-error *ngIf="form.get('dateDonation').invalid">El campo fecha de donación es
+                            <strong>requerido</strong></mat-error>
+                    </mat-form-field>
+                </mat-grid-tile>
+
+            </mat-grid-list>
+            <mat-divider></mat-divider>
+            <br>
+            <div class="actions-buttons">
+                <button type="button" *ngIf="mode === 0" mat-raised-button color="primary"
+                    (click)="submit()">Crear</button>
+                <button type="button" *ngIf="mode === 1" mat-raised-button color="primary"
+                    (click)="submit()">Editar</button>
+                <button type="button" *ngIf="mode === 3" mat-raised-button color="primary"
+                    (click)="submit()">Eliminar</button>
+                <button type="button" (click)="close()" mat-button color="asscent">Cancelar</button>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</form>

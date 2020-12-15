@@ -1,4 +1,5 @@
 import { Action, createReducer, on } from '@ngrx/store';
+import { Bank } from 'src/app/models/bank.model';
 import { DonationMoney } from 'src/app/models/donation-money.model';
 import { DonationNonPerishable } from 'src/app/models/donation-non-perishable.model';
 import { DonationPerishable } from 'src/app/models/donation-perishable.model';
@@ -21,6 +22,7 @@ export interface State {
   stateMaterials: StateMaterial[];
   typeDonations: TypeDonation[];
   typeIdentifications: TypeIdentification[];
+  banks: Bank[];
 }
 
 export const initialState: State = {
@@ -34,7 +36,8 @@ export const initialState: State = {
   donationNonPerishable: null,
   stateMaterials: [],
   typeDonations: [],
-  typeIdentifications: []
+  typeIdentifications: [],
+  banks: []
 };
 
 export const reducer = createReducer(
@@ -49,6 +52,62 @@ export const reducer = createReducer(
     isLoading: false
   })),
   on(fromActions.loadDonationsMoneyFailure, (state, { error }) => ({
+    ...state,
+    isLoading: false,
+    error,
+  })),
+  on(fromActions.loadTypeDonation, (state) => ({
+    ...state,
+    isLoading: true
+  })),
+  on(fromActions.loadTypeDonationSuccess, (state, { typeDonations }) => ({
+    ...state,
+    typeDonations,
+    isLoading: false
+  })),
+  on(fromActions.loadTypeDonationFailure, (state, { error }) => ({
+    ...state,
+    isLoading: false,
+    error,
+  })),
+  on(fromActions.loadTypeIdentification, (state) => ({
+    ...state,
+    isLoading: true
+  })),
+  on(fromActions.loadTypeIdentificationSuccess, (state, { typeIdentifications }) => ({
+    ...state,
+    typeIdentifications,
+    isLoading: false
+  })),
+  on(fromActions.loadTypeIdentificationFailure, (state, { error }) => ({
+    ...state,
+    isLoading: false,
+    error,
+  })),
+  on(fromActions.loadStateMaterial, (state) => ({
+    ...state,
+    isLoading: true
+  })),
+  on(fromActions.loadStateMaterialSuccess, (state, { stateMaterials }) => ({
+    ...state,
+    stateMaterials,
+    isLoading: false
+  })),
+  on(fromActions.loadStateMaterialFailure, (state, { error }) => ({
+    ...state,
+    isLoading: false,
+    error,
+  })),
+  on(fromActions.loadBanks, (state) => ({
+    ...state,
+    isLoading: true
+  })),
+  on(fromActions.loadBanksSuccess, (state, { banks }) => ({
+    ...state,
+    banks,
+    isLoading: false
+  })),
+  on(fromActions.loadBanksFailure, (state, { error }) => ({
     ...state,
     isLoading: false,
     error,
