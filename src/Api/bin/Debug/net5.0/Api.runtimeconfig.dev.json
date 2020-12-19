@@ -2,8 +2,7 @@
   "runtimeOptions": {
     "additionalProbingPaths": [
       "C:\\Users\\oroja\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\oroja\\.nuget\\packages",
-      "C:\\Microsoft\\Xamarin\\NuGet"
+      "C:\\Users\\oroja\\.nuget\\packages"
     ]
   }
 }

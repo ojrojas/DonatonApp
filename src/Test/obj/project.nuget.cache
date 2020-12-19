@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HP6mcQV7z3C4vNR1YD+jUX0X6+rhamHJgIEgLQY9FFkATgHtmbnlu00xG0pkqyUipf0WbGpLJ0lKvDX+jnjP5w==",
+  "dgSpecHash": "rFg9VeCIHsbPV/6STospC95BObTREA9Y0RFzHf+Xif4ArBY1WmDe84GoNxwyhbqua8hdWvFBTu+vK8vMzAo7sQ==",
   "success": true,
-  "projectFilePath": "c:\\Users\\oroja\\sources\\projects\\netcore\\donaton-app\\src\\Test\\Test.csproj",
+  "projectFilePath": "C:\\Users\\oroja\\sources\\netcore\\DonatonApp\\src\\Test\\Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\oroja\\.nuget\\packages\\ardalis.guardclauses\\3.0.1\\ardalis.guardclauses.3.0.1.nupkg.sha512",
     "C:\\Users\\oroja\\.nuget\\packages\\ardalis.specification\\4.1.0\\ardalis.specification.4.1.0.nupkg.sha512",
