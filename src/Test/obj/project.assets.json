@@ -8872,38 +8872,45 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\oroja\\.nuget\\packages\\": {}
+    "C:\\Users\\oroja\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\oroja\\sources\\netcore\\DonatonApp\\src\\Test\\Test.csproj",
+      "projectUniqueName": "D:\\Source\\ojrojas\\DonatonApp\\src\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\oroja\\sources\\netcore\\DonatonApp\\src\\Test\\Test.csproj",
+      "projectPath": "D:\\Source\\ojrojas\\DonatonApp\\src\\Test\\Test.csproj",
       "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\oroja\\sources\\netcore\\DonatonApp\\src\\Test\\obj\\",
+      "outputPath": "D:\\Source\\ojrojas\\DonatonApp\\src\\Test\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\oroja\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\oroja\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\oroja\\sources\\netcore\\DonatonApp\\src\\Api\\Api.csproj": {
-              "projectPath": "C:\\Users\\oroja\\sources\\netcore\\DonatonApp\\src\\Api\\Api.csproj"
+            "D:\\Source\\ojrojas\\DonatonApp\\src\\Api\\Api.csproj": {
+              "projectPath": "D:\\Source\\ojrojas\\DonatonApp\\src\\Api\\Api.csproj"
             },
-            "C:\\Users\\oroja\\sources\\netcore\\DonatonApp\\src\\Core\\Core.csproj": {
-              "projectPath": "C:\\Users\\oroja\\sources\\netcore\\DonatonApp\\src\\Core\\Core.csproj"
+            "D:\\Source\\ojrojas\\DonatonApp\\src\\Core\\Core.csproj": {
+              "projectPath": "D:\\Source\\ojrojas\\DonatonApp\\src\\Core\\Core.csproj"
             },
-            "C:\\Users\\oroja\\sources\\netcore\\DonatonApp\\src\\Infraestructure\\Infraestructure.csproj": {
-              "projectPath": "C:\\Users\\oroja\\sources\\netcore\\DonatonApp\\src\\Infraestructure\\Infraestructure.csproj"
+            "D:\\Source\\ojrojas\\DonatonApp\\src\\Infraestructure\\Infraestructure.csproj": {
+              "projectPath": "D:\\Source\\ojrojas\\DonatonApp\\src\\Infraestructure\\Infraestructure.csproj"
             }
           }
         }
@@ -8964,11 +8971,14 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
