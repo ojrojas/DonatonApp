@@ -16,3 +16,11 @@ C:\Users\oroja\sources\netcore\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core
 C:\Users\oroja\sources\netcore\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.csproj.CoreCompileInputs.cache
 C:\Users\oroja\sources\netcore\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.dll
 C:\Users\oroja\sources\netcore\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.pdb
+D:\Source\ojrojas\DonatonApp\src\Core\bin\Debug\netstandard2.1\Core.deps.json
+D:\Source\ojrojas\DonatonApp\src\Core\bin\Debug\netstandard2.1\Core.dll
+D:\Source\ojrojas\DonatonApp\src\Core\bin\Debug\netstandard2.1\Core.pdb
+D:\Source\ojrojas\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.AssemblyInfoInputs.cache
+D:\Source\ojrojas\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.AssemblyInfo.cs
+D:\Source\ojrojas\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.csproj.CoreCompileInputs.cache
+D:\Source\ojrojas\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.dll
+D:\Source\ojrojas\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.pdb
