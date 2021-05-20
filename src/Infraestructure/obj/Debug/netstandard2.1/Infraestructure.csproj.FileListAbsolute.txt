@@ -34,3 +34,15 @@ D:\Source\ojrojas\DonatonApp\src\Infraestructure\obj\Debug\netstandard2.1\Infrae
 D:\Source\ojrojas\DonatonApp\src\Infraestructure\obj\Debug\netstandard2.1\Infraestructure.csproj.CopyComplete
 D:\Source\ojrojas\DonatonApp\src\Infraestructure\obj\Debug\netstandard2.1\Infraestructure.dll
 D:\Source\ojrojas\DonatonApp\src\Infraestructure\obj\Debug\netstandard2.1\Infraestructure.pdb
+D:\Source\ojrojas\Github\DonatonApp\src\Infraestructure\bin\Debug\netstandard2.1\Infraestructure.deps.json
+D:\Source\ojrojas\Github\DonatonApp\src\Infraestructure\bin\Debug\netstandard2.1\Infraestructure.dll
+D:\Source\ojrojas\Github\DonatonApp\src\Infraestructure\bin\Debug\netstandard2.1\Infraestructure.pdb
+D:\Source\ojrojas\Github\DonatonApp\src\Infraestructure\bin\Debug\netstandard2.1\Core.dll
+D:\Source\ojrojas\Github\DonatonApp\src\Infraestructure\bin\Debug\netstandard2.1\Core.pdb
+D:\Source\ojrojas\Github\DonatonApp\src\Infraestructure\obj\Debug\netstandard2.1\Infraestructure.csprojAssemblyReference.cache
+D:\Source\ojrojas\Github\DonatonApp\src\Infraestructure\obj\Debug\netstandard2.1\Infraestructure.AssemblyInfoInputs.cache
+D:\Source\ojrojas\Github\DonatonApp\src\Infraestructure\obj\Debug\netstandard2.1\Infraestructure.AssemblyInfo.cs
+D:\Source\ojrojas\Github\DonatonApp\src\Infraestructure\obj\Debug\netstandard2.1\Infraestructure.csproj.CoreCompileInputs.cache
+D:\Source\ojrojas\Github\DonatonApp\src\Infraestructure\obj\Debug\netstandard2.1\Infraestructure.csproj.CopyComplete
+D:\Source\ojrojas\Github\DonatonApp\src\Infraestructure\obj\Debug\netstandard2.1\Infraestructure.dll
+D:\Source\ojrojas\Github\DonatonApp\src\Infraestructure\obj\Debug\netstandard2.1\Infraestructure.pdb

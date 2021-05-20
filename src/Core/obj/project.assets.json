@@ -963,11 +963,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Source\\ojrojas\\DonatonApp\\src\\Core\\Core.csproj",
+      "projectUniqueName": "D:\\Source\\ojrojas\\Github\\DonatonApp\\src\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "D:\\Source\\ojrojas\\DonatonApp\\src\\Core\\Core.csproj",
+      "projectPath": "D:\\Source\\ojrojas\\Github\\DonatonApp\\src\\Core\\Core.csproj",
       "packagesPath": "C:\\Users\\oroja\\.nuget\\packages\\",
-      "outputPath": "D:\\Source\\ojrojas\\DonatonApp\\src\\Core\\obj\\",
+      "outputPath": "D:\\Source\\ojrojas\\Github\\DonatonApp\\src\\Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -1030,7 +1030,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
