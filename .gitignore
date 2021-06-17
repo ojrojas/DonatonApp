@@ -23,6 +23,13 @@ bin/
 Bin/
 obj/
 Obj/
+src/Api/[Bb]in/
+src/Core/[Oo]bj/
+src/Core/[Bb]in/
+src/Infraestructure/[Oo]bj/
+src/Infraestructure/[Bb]in/
+src/Test/[Oo]bj/
+src/Test/[Bb]in/
 
 # Visual Studio 2015 cache/options directory
 .vs/**
