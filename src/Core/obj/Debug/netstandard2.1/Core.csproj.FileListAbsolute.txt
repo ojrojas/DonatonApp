@@ -28,7 +28,6 @@ D:\Source\ojrojas\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.pdb
 D:\Source\ojrojas\Github\DonatonApp\src\Core\bin\Debug\netstandard2.1\Core.deps.json
 D:\Source\ojrojas\Github\DonatonApp\src\Core\bin\Debug\netstandard2.1\Core.dll
 D:\Source\ojrojas\Github\DonatonApp\src\Core\bin\Debug\netstandard2.1\Core.pdb
-D:\Source\ojrojas\Github\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.csproj.AssemblyReference.cache
 D:\Source\ojrojas\Github\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.GeneratedMSBuildEditorConfig.editorconfig
 D:\Source\ojrojas\Github\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.AssemblyInfoInputs.cache
 D:\Source\ojrojas\Github\DonatonApp\src\Core\obj\Debug\netstandard2.1\Core.AssemblyInfo.cs

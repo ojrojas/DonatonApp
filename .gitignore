@@ -24,6 +24,7 @@ Bin/
 obj/
 Obj/
 src/Api/[Bb]in/
+src/Api/[Oo]bj/
 src/Core/[Oo]bj/
 src/Core/[Bb]in/
 src/Infraestructure/[Oo]bj/
